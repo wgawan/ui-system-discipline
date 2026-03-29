@@ -1,6 +1,6 @@
 # UI System Discipline
 
-A Claude Code skill for designing and enforcing UI systems that minimize user effort, reduce cognitive load, and translate user intent into clear, structured interfaces.
+A skill for Claude Code and OpenAI Codex for designing and enforcing UI systems that minimize user effort, reduce cognitive load, and translate user intent into clear, structured interfaces.
 
 This skill doesn't just critique UI. It restructures it.
 
@@ -17,10 +17,38 @@ This skill doesn't just critique UI. It restructures it.
 ### Option 1: Claude Code CLI
 
 ```bash
-claude skill add --url https://github.com/wallyflops/ui-system-discipline
+claude skill add --url https://github.com/wgawan/ui-system-discipline
 ```
 
-### Option 2: Manual
+### Option 2: OpenAI Codex
+
+Copy this skill into your Codex skills directory:
+
+```bash
+mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills/ui-system-discipline"
+cp SKILL.md "${CODEX_HOME:-$HOME/.codex}/skills/ui-system-discipline/SKILL.md"
+mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills/ui-system-discipline/agents"
+cp agents/openai.yaml "${CODEX_HOME:-$HOME/.codex}/skills/ui-system-discipline/agents/openai.yaml"
+```
+
+Restart Codex after installing so it reloads the skill list.
+
+To use it in Codex:
+
+- Mention the skill directly in your prompt with `$ui-system-discipline`
+- Or let Codex invoke it implicitly on UI-heavy tasks after install
+
+Example prompts:
+
+```text
+Use $ui-system-discipline to redesign this dashboard so the primary action is obvious.
+```
+
+```text
+Use $ui-system-discipline to review this settings page and then implement the layout fixes.
+```
+
+### Option 3: Manual Claude Code
 
 Copy `SKILL.md` to your Claude Code skills directory:
 
