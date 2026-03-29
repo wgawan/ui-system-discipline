@@ -1,6 +1,6 @@
 # UI System Discipline
 
-A skill for Claude Code and OpenAI Codex for designing and enforcing UI systems that minimize user effort, reduce cognitive load, and translate user intent into clear, structured interfaces.
+A skill for Gemini CLI, Claude Code, and OpenAI Codex for designing and enforcing UI systems that minimize user effort, reduce cognitive load, and translate user intent into clear, structured interfaces.
 
 This skill doesn't just critique UI. It restructures it.
 
@@ -14,13 +14,32 @@ This skill doesn't just critique UI. It restructures it.
 
 ## Install
 
-### Option 1: Claude Code CLI
+### Option 1: Gemini CLI
+
+Install the skill to your user scope:
+
+```bash
+gemini skills install https://github.com/wgawan/ui-system-discipline
+```
+
+Or install it only for your current workspace:
+
+```bash
+gemini skills install https://github.com/wgawan/ui-system-discipline --scope workspace
+```
+
+To use it in Gemini CLI:
+
+- Gemini will autonomously activate the skill when you ask for UI-related tasks (e.g., "Redesign this page" or "Review the layout of this component").
+- You can also explicitly ask: "Use the ui-system-discipline skill to review this dashboard."
+
+### Option 2: Claude Code CLI
 
 ```bash
 claude skill add --url https://github.com/wgawan/ui-system-discipline
 ```
 
-### Option 2: OpenAI Codex
+### Option 3: OpenAI Codex
 
 Copy this skill into your Codex skills directory:
 
@@ -48,7 +67,7 @@ Use $ui-system-discipline to redesign this dashboard so the primary action is ob
 Use $ui-system-discipline to review this settings page and then implement the layout fixes.
 ```
 
-### Option 3: Manual Claude Code
+### Option 4: Manual Claude Code
 
 Copy `SKILL.md` to your Claude Code skills directory:
 
