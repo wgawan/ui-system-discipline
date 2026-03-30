@@ -2,7 +2,7 @@
 
 A skill for Gemini CLI, Claude Code, and OpenAI Codex for designing and enforcing UI systems that minimize user effort, reduce cognitive load, and translate user intent into clear, structured interfaces.
 
-This skill doesn't just critique UI. It restructures it.
+This skill doesn't just critique UI. It gives the interface a face lift.
 
 ## What It Does
 
@@ -11,6 +11,7 @@ This skill doesn't just critique UI. It restructures it.
 - Applies consistent design tokens (typography scale, spacing system, color system, border radius)
 - Uses an explicit workflow: inspect, classify, restructure, implement, validate
 - Covers accessibility, motion, empty/loading states, interaction states, and data density
+- Pushes the agent to make bolder structural changes instead of timid polish
 
 ## Install
 
@@ -91,6 +92,7 @@ It should not trigger for backend-only work, generic refactors with no user-faci
 2. **If everything is visible, the design is wrong.** Use progressive disclosure.
 3. **Clarity always wins over expressiveness.** Simple beats clever.
 4. **Structure before style.** If the layout doesn't work in grayscale with no borders, it doesn't work.
+5. **A redesign should feel obvious.** If it still looks like the same noisy screen with nicer spacing, it wasn't pushed far enough.
 
 ## Design Tokens
 

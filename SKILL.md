@@ -15,11 +15,15 @@ description: >-
 
 Redesign weak UI by changing structure, hierarchy, and implementation. Do not stop at critique when code changes are appropriate.
 
+Treat this skill as a facelift, not a cosmetics pass. If the interface is confusing, noisy, or visually flat, change the structure hard enough that the result feels noticeably clearer within seconds.
+
 ## Core Objective
 
 Reduce user effort.
 
 Translate the user's goal into the shortest clear path through the interface, then implement the layout, component, and styling changes needed to support that path.
+
+The desired effect is obvious improvement, not subtle rearrangement. Users should feel that the screen became cleaner, faster, and more decisive.
 
 ## Operating Rules
 
@@ -30,6 +34,33 @@ Translate the user's goal into the shortest clear path through the interface, th
 5. Treat color, borders, shadows, and icons as supporting signals.
 6. Preserve consistency across similar components and states.
 7. Prefer familiar patterns over clever ones.
+8. If the current screen feels bloated, cut harder.
+9. If two elements compete for attention, pick a winner.
+10. If decoration is carrying comprehension, remove the decoration and fix the structure.
+
+## Non-Negotiables
+
+- Do not preserve clutter just because it already exists.
+- Do not keep tertiary controls in the main scan path without a strong reason.
+- Do not add visual styling to avoid making hierarchy decisions.
+- Do not describe a better UI when you can implement one.
+- Do not accept "more visible" as automatically "more usable."
+- Do not let secondary actions look equal to the primary action.
+
+## Face-Lift Standard
+
+Aim for a before-and-after difference that is immediately visible.
+
+The result should typically feel like:
+- fewer things competing for attention
+- a stronger focal point
+- cleaner grouping
+- less explanatory text
+- more deliberate spacing
+- more confident typography
+- fewer low-value surfaces, borders, and wrappers
+
+If the revised UI still feels like the same screen with slightly better spacing, push further.
 
 ## Execution Workflow
 
@@ -80,6 +111,8 @@ Do not rely on color, shadows, borders, or icons to explain a weak layout.
 
 Use progressive disclosure when complexity is real but not immediately necessary.
 
+When deciding whether to keep or remove something, default to removal until it earns its place.
+
 ### 5. Apply a Small System
 
 Use explicit, reusable tokens rather than arbitrary values.
@@ -118,6 +151,13 @@ Typical changes include:
 - improving empty, loading, error, hover, focus, active, and disabled states
 - replacing non-semantic clickable containers with proper elements
 
+Be willing to:
+- collapse noisy toolbars
+- merge fragmented cards into clearer sections
+- move weak secondary actions out of the hero area
+- reduce label density when layout already conveys meaning
+- replace "everything is important" layouts with a single dominant story
+
 When the user asks only for review, provide the redesign plan without editing files.
 
 ### 7. Verify the Result
@@ -144,6 +184,7 @@ If a requested design choice conflicts with clarity or accessibility, say so dir
 - Use one dominant element per section.
 - Put the most important content first in both layout and reading order.
 - Demote support content with size, weight, position, and spacing before reaching for muted colors.
+- Make primary content hard to miss and secondary content easy to ignore until needed.
 
 ### Affordance
 
@@ -157,6 +198,7 @@ If a requested design choice conflicts with clarity or accessibility, say so dir
 - Align repeated structures consistently.
 - Right-align numeric columns and use monospace when tabular values need precise scanning.
 - Remove borders and dividers that do not improve comprehension.
+- Increase density through alignment and rhythm, not visual noise.
 
 ### Motion
 
@@ -169,6 +211,18 @@ If a requested design choice conflicts with clarity or accessibility, say so dir
 - Avoid `div` or `span` click targets when a semantic control exists.
 - Maintain reasonable contrast and readable text sizes.
 - Treat accessibility fixes as part of the redesign, not optional cleanup.
+
+## Escalation Rule
+
+Escalate the redesign when you see any of these patterns:
+- more than one main CTA presented as equally important
+- every card, panel, or widget styled to shout at the same volume
+- controls displayed preemptively instead of contextually
+- long labels compensating for weak layout
+- repeated borders, boxes, and iconography doing the work of structure
+- key information buried below metadata or chrome
+
+In those cases, make bolder changes. Reorder, merge, hide, simplify, and delete until the interface tells a clear story.
 
 ## Response Shape
 

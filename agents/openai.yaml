@@ -1,4 +1,4 @@
 interface:
   display_name: "UI System Discipline"
-  short_description: "Restructure UIs for clarity and flow"
-  default_prompt: "Use $ui-system-discipline to review this UI, restructure the hierarchy, implement the layout fixes, and validate the result."
+  short_description: "Give cluttered UIs a clear face lift"
+  default_prompt: "Use $ui-system-discipline to give this UI a face lift by restructuring the hierarchy, simplifying the layout, implementing the fixes, and validating the result."
