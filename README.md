@@ -9,8 +9,8 @@ This skill doesn't just critique UI. It restructures it.
 - Enforces structure-first design (layout, spacing, typography before color and decoration)
 - Maps user intent to the fastest UI path
 - Applies consistent design tokens (typography scale, spacing system, color system, border radius)
-- Provides a concrete redesign workflow with required output format
-- Covers accessibility, motion, empty/loading states, data density, and dark mode
+- Uses an explicit workflow: inspect, classify, restructure, implement, validate
+- Covers accessibility, motion, empty/loading states, interaction states, and data density
 
 ## Install
 
@@ -78,10 +78,12 @@ cp SKILL.md ~/.claude/skills/ui-system-discipline/SKILL.md
 
 ## When It Activates
 
-- Building or reviewing any user interface
-- Working with component files (`.tsx`, `.jsx`, `.vue`, `.svelte`, `.css`)
-- Designing dashboards, forms, settings pages, or data-heavy views
-- Asking for UI feedback or design review
+- Redesigning or reviewing an existing UI
+- Building a new screen where hierarchy and user flow matter
+- Working on dashboards, forms, settings pages, tables, detail views, navigation, or component libraries
+- Asking for UI feedback that should lead to concrete structural fixes
+
+It should not trigger for backend-only work, generic refactors with no user-facing impact, or tiny visual polish requests that intentionally preserve the current layout.
 
 ## Core Principles
 
@@ -100,16 +102,19 @@ cp SKILL.md ~/.claude/skills/ui-system-discipline/SKILL.md
 | Color | Neutral-first, one accent, semantic only |
 | Motion | 150-250ms micro, 300-500ms transitions |
 
-## Output Format
+## Workflow
 
-When the skill activates, it produces:
+For substantial UI review or redesign tasks, the skill guides the agent through:
 
 1. **Diagnosis** of current UI issues
 2. **Intent** mapping (what the user is trying to accomplish)
 3. **Priority map** (primary / secondary / tertiary classification)
-4. **Design tokens** (specific values for typography, spacing, color, radius)
+4. **Design system choices** (specific typography, spacing, color, and radius values)
 5. **Layout redesign** with hierarchy corrections
 6. **Implementation** with concrete code changes
+7. **Validation** against hierarchy, states, responsiveness, and accessibility checks
+
+For narrower frontend tasks, the skill is intentionally lighter-weight: it should patch the UI directly instead of forcing every section into the response.
 
 ## License
 
